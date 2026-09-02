@@ -1,0 +1,267 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f8;
+    color: #333;
+    line-height: 1.6;
+}
+
+
+/* Header */
+header {
+    background-color: #243b55;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+
+/* Profile */
+.profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+
+
+/* Profile Picture */
+.profile img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid white;
+
+    /* Transition */
+    transition: transform 0.4s;
+}
+
+
+/* Profile Picture Hover Effect */
+.profile img:hover {
+    transform: scale(1.1);
+}
+
+
+/* Profile Information */
+.profile-info {
+    text-align: left;
+}
+
+
+.profile h1 {
+    font-size: 32px;
+}
+
+
+.profile p {
+    font-size: 18px;
+    margin-top: 5px;
+}
+
+
+/* Navigation */
+nav {
+    margin-top: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+
+    /* Transition */
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #7dd3fc;
+}
+
+
+/* Main Sections */
+main {
+    width: 80%;
+    max-width: 1000px;
+    margin: 30px auto;
+}
+
+.section {
+    background-color: white;
+    margin-bottom: 25px;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.section h2 {
+    color: #243b55;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #243b55;
+    padding-bottom: 5px;
+}
+
+
+/* Cards */
+.card {
+    background-color: #f1f5f9;
+    padding: 18px;
+    margin: 15px 0;
+    border-radius: 8px;
+
+    /* Transition */
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Card Hover Effect */
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.card h3 {
+    color: #243b55;
+    margin-bottom: 5px;
+}
+
+
+/* Skills */
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.skill {
+    background-color: #243b55;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+
+    /* Transition */
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.skill:hover {
+    background-color: #3b82a0;
+    transform: scale(1.05);
+}
+
+
+/* Projects */
+.projects {
+    display: flex;
+    gap: 20px;
+}
+
+.projects .card {
+    flex: 1;
+}
+
+
+/* Contact */
+#contact p {
+    margin: 8px 0;
+}
+
+
+/* Footer */
+footer {
+    background-color: #243b55;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 30px;
+}
+
+
+/* =========================
+   RESPONSIVE DESIGN
+   ========================= */
+
+/* Tablet and Mobile */
+@media (max-width: 768px) {
+
+    header {
+        padding: 25px 10px;
+    }
+
+    .profile {
+    flex-direction: column;
+    text-align: center;
+    }
+
+    .profile-info {
+    text-align: center;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 5px;
+    }
+
+    main {
+        width: 90%;
+    }
+
+    .projects {
+        flex-direction: column;
+    }
+
+    .skills {
+        justify-content: center;
+    }
+}
+
+
+/* Small Mobile Screens */
+@media (max-width: 480px) {
+
+    header {
+        padding: 20px 10px;
+    }
+
+    .profile img {
+    width: 100px;
+    height: 100px;
+    }
+
+    .profile p {
+        font-size: 15px;
+    }
+
+    nav a {
+        display: block;
+        margin: 8px;
+    }
+
+    main {
+        width: 95%;
+        margin: 15px auto;
+    }
+
+    .section {
+        padding: 18px;
+    }
+
+    .section h2 {
+        font-size: 21px;
+    }
+
+    .skills {
+        flex-direction: column;
+    }
+
+    .skill {
+        text-align: center;
+    }
+}
