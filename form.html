@@ -1,0 +1,95 @@
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  </head>
+  <body>
+    <h1> STUDENT REG FORM</h1>
+    <form id="studentForm" onsubmit="return validateMyform()">
+
+        Enrollment Number: <br>
+        <input type="text" id="enrollment"><br><br>
+
+        Name: <br>
+        <input type="text" id="name"><br><br>
+
+        Email ID: <br>
+        <input type="email" id="email"><br><br>
+
+        Password: <br>
+        <input type="password" id="password"><br><br>
+
+        Confirm Password: <br>
+        <input type="password" id="confirmPassword"><br><br>
+
+        Phone Number: <br>
+        <input type="text" id="phone"><br><br>
+
+        Address: <br>
+        <textarea id="address" rows="3" cols="30"></textarea><br><br>
+
+        Gender: <br>
+        <input type="radio" name="gender" value="Male"> Male
+        <input type="radio" name="gender" value="Female"> Female
+        <br><br>
+
+        Branch: <br>
+        <select id="branch">
+            <option value="">--Select Branch--</option>
+            <option value="Computer Engineering">Computer Engineering</option>
+            <option value="IT Engineering">IT Engineering</option>
+            <option value="Electronics">Electronics</option>
+            <option value="Mechanical">Mechanical</option>
+            <option value="Civil">Civil</option>
+        </select><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+    <script>
+        function validateMyform(){
+            let er = document.getElementById("enrollment").value;
+            let name = document.getElementById("name").value;
+            let email = document.getElementById("email").value;
+            let pw = document.getElementById("password").value;
+            let cp = document.getElementById("confirmPassword").value;
+            let phone = document.getElementById("phone").value;
+            let ad = document.getElementById("address").value;
+            let gender = document.querySelector('input[name="gender"]:checked');
+            let branch = document.getElementById("branch").value;
+
+            if(er=== ""|| name=== "" || email=== "" || pw=== "" || cp=== "" || phone=== "" || ad=== "" || !gender || branch=== "") {
+             alert("please fill out all details");
+             return false;
+        }
+
+        let emailpattern=/^[a-z]+\.{1}.[a-z]+[0-9]{6}@marwadiuniversity.ac.in$/
+        if(!email.match(emailpattern)){
+            alert("invalid email");
+            return false;
+        }
+
+        if(password < 6){
+            alert("range more than 6");
+            return false;
+        }
+
+        if(passowrd !== confirmPassword){
+            alert("password does not match");
+            return false;
+        }
+
+        let phonepattern=/^[0-9]{10}$/
+        if(!phone.match(phonepattern)){
+            alert("phone not match");
+            return false;
+        }
+
+        alert("thank you");
+        return true;
+     }
+    </script>
+  </body>
+  </html>
+  
